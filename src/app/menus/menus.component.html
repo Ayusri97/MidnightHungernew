@@ -1,26 +1,44 @@
-<ul class="nav nav-pills" id="myTab" role="tablist">
-  <li class="nav-item">
-      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#veg" role="tab" aria-controls="home" aria-selected="true">Veg</a>
-  </li>
-  <li class="nav-item">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#nonveg" role="tab" aria-controls="profile" aria-selected="false">Non-Veg</a>
-  </li>
-  <li class="nav-item">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#italian" role="tab" aria-controls="contact" aria-selected="false">Beverages</a>
-  </li>
-  
-</ul>
-<br />
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="veg" role="tabpanel" aria-labelledby="home-tab">
-    <h1>This is panel 1</h1>
-  </div>
-  <div class="tab-pane fade" id="nonveg" role="tabpanel" aria-labelledby="profile-tab">
-    <h1>This is Panel 2</h1>
-      </div>
-  <div class="tab-pane fade" id="italian" role="tabpanel" aria-labelledby="contact-tab">
-      <h1>This is Panel 3</h1>
-    
-  </div>
+<div class="header">
+    <div class="container">
+        <div class="header-nav">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <i class="glyphicon glyphicon-cutlery" aria-hidden="true"></i>
+                        <span>Midnight</span>Hunger</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="hvr-bounce-to-bottom">
+                            <a routerLink="/Home">Home</a>
+                        </li>
+                        <li class="hvr-bounce-to-bottom">
+                            <a routerLink="/AboutUs">About</a>
+                        </li>
+                        <li class="hvr-bounce-to-bottom">
+                            <a routerLink="/Menu">Menu</a>
+                        </li>
+                        <li class="hvr-bounce-to-bottom">
+                            <a routerLink="/SignUp">SignUp</a>
+                        </li>
+                        <li class="hvr-bounce-to-bottom">
+                            <a routerLink="/Customer">SignIn</a>
+                        </li>
+                        <li class="hvr-bounce-to-bottom">
+                            <a routerLink="/Contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /navbar-collapse -->
+            </nav>
+        </div>
+    </div>
 </div>
-

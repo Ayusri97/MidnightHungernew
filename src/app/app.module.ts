@@ -11,13 +11,16 @@ import { CreateAccComponent } from './create-acc/create-acc.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AdminComponent } from './admin/admin.component';
-import { Menu1Component } from './menu1/menu1.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { AccountServiceService } from './account-service.service';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ViewAccountsComponent } from './view-accounts/view-accounts.component';
+import { ContactServiceService } from './contactservice.service';
+import { FooterComponent } from './footer/footer.component';
+import { AdminMenuComponent } from './admin-menu/admin-menu.component';
+import { SubmenuComponent } from './submenu/submenu.component';
 
 
 
@@ -25,7 +28,7 @@ import { ViewAccountsComponent } from './view-accounts/view-accounts.component';
 const appRoute:Routes=[
  
   {path:'Home',component:HomeComponent},
-   {path:'Menu',component:MenusComponent},
+   {path:'Menu',component:SubmenuComponent},
    {path:'AboutUs',component:AboutComponent},
    {path:'Contact',component:ContactComponent},
    {path:'SignUp',component:CreateAccComponent},
@@ -33,6 +36,9 @@ const appRoute:Routes=[
    {path:'Customer',component:CustomerComponent},
    {path:'Admin',component:AdminComponent},
    {path:'AdminLogin',component:AdminLoginComponent},
+   {path:'view-accounts',component:ViewAccountsComponent},
+   
+   
    
    
    {path:'',component:HomeComponent}
@@ -50,14 +56,16 @@ const appRoute:Routes=[
     FeedbackComponent,
     CustomerComponent,
     AdminComponent,
-    Menu1Component,
     AdminLoginComponent,
-    ViewAccountsComponent
+    ViewAccountsComponent,
+    FooterComponent,
+    AdminMenuComponent,
+    SubmenuComponent
   ],
   imports: [
     BrowserModule,FormsModule,RouterModule.forRoot(appRoute),HttpClientModule,HttpModule
   ],
-  providers: [AccountServiceService],
+  providers: [AccountServiceService, ContactServiceService],
   bootstrap: [AppComponent,]
 })
 export class AppModule { }
