@@ -16,6 +16,7 @@ export class CreateAccComponent implements OnInit {
     this.objAccount = {
       "Name": acc.Name,
       "Address": acc.Address,
+      "Email": acc.Email,
       "Contact": acc.Contact,
       "Password": acc.Password
     }
