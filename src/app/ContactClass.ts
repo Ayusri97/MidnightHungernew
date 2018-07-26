@@ -5,3 +5,4 @@ export class Contact {
     public Email: String;
     public Message: String;
 }
+ 

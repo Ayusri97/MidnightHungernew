@@ -7,6 +7,8 @@ import { Account } from '../AccountClass';
   styleUrls: ['./create-acc.component.css']
 })
 export class CreateAccComponent implements OnInit {
+  msg: string="Your account has been creeated successfully.";
+  isAdded: boolean=false;
   private objAccount: Account;
   constructor(private q: AccountServiceService) { }
 
@@ -20,7 +22,8 @@ export class CreateAccComponent implements OnInit {
       "Contact": acc.Contact,
       "Password": acc.Password
     }
-    this.q.createAccData(this.objAccount).subscribe()
-
+    this.q.createAccData(this.objAccount).subscribe(data => {
+      this.isAdded = true;
+    });
   }
 }

@@ -2,21 +2,27 @@
 <div class="contact">
     <div class="container">
         <div class="contact-main">
-            <h3>Create your account</h3>
             <div class="contact-top">
 
                 <div class="col-md-6 contact-top-right">
+            <h3>Create your account</h3>
+                    
+                        <div class="alert alert-success" role="alert" *ngIf="isAdded">
+                                <strong>Alert!</strong>{{msg}}
+                               </div>
                     <div class="contact-textarea">
-                        <form id="form1" name="form1" #AccData="ngForm" (ngSubmit)="AddNewAccount(AccData.value)">
+                        <form id="form1" method="post"name="form1" #AccData="ngForm" (ngSubmit)="AddNewAccount(AccData.value)">
 
-                            <input type="text" name="Name" ngModel placeholder="Name"/>
-                            <input type="text" name="Address" ngModel  placeholder="Address"/>
-                            <input type="text" name="Email" ngModel  placeholder="Email"/>                         
-                            <input type="text" name="Contact" ngModel  placeholder="Contact"/>
-                            <input type="text" name="Password" ngModel placeholder="Password" />
+                            <input type="text" name="Name" ngModel placeholder="Name" />
+                            <input type="text" name="Address" ngModel placeholder="Address" />
+                            <input type="text" name="Email" ngModel placeholder="Email" />
+                            <input type="text" name="Contact" ngModel placeholder="Contact" />
+                            <input type="password" name="Password" ngModel placeholder="Password" />
 
-
+                           <div>
                             <input type="submit" value="SUBMIT">
+                            
+                        </div>
                         </form>
                     </div>
                 </div>

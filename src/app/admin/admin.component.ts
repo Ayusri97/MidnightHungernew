@@ -7,12 +7,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
-  constructor(private route:Router) { }
-
+  msg: string = "Invalid Username or Password!";
+  isAdded: boolean = false;
+  constructor(private route: Router) { }
   ngOnInit() {
   }
-viewAdmin(k){
-  this.route.navigate(['/AdminLogin']);
-}
+  AddNewContact(ld) {
+    var email = ld.Email;
+    var password = ld.Password;
+    if (email == 'admin' && password == 'admin') {
+      this.route.navigate(['/AdminLogin'])
+    }
+    else {
+      this.isAdded = true;
+    }
+  }
+
 }

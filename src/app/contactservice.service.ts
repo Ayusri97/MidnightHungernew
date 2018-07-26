@@ -14,5 +14,10 @@ export class ContactServiceService {
   createConData(objContact: Contact) {
     return this._http.post(this.baseUri + '/create2', objContact, { headers: this.headers })
   }
+  
+  GetContactData(){
+    return this._http.get(this.baseUri + '/read2', { headers: this.headers })
+    
+  }
 
 }

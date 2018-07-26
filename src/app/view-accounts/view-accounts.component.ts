@@ -10,21 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewAccountsComponent implements OnInit {
 
-  //private objAccount: Account;
+  private objAccount: Account;
 
   constructor(private q: AccountServiceService ,private route: Router) { }
 
   ngOnInit() {
-  //  this.GetAccount();
+   this.GetAccList();
  }
-//  GetAccount() {
-//   this.q.GetAccData().subscribe(
-//     data => {
-//       // console.log(data);
-//       this.objAccount = data['msg'];
-//     }
-//   )
-// }
+ GetAccList() {
+  this.q.GetAccData().subscribe(
+    data => {
+      // console.log(data);
+      this.objAccount = data['msg'];
+    }
+  )
+}
 
     }
    

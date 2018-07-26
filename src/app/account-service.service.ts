@@ -17,4 +17,14 @@ export class AccountServiceService {
   GetAccData() {
     return this._http.get(this.baseUri + '/read', { headers: this.headers })
   }
+  // getToken() {
+  //   return localStorage.getItem('token')
+  // }
+  userLogin(objemp: Account) {
+    return this._http.post(this.baseUri + '/userLogin', objemp, { headers: this.headers })
+  }
+  logout() {
+    localStorage.clear();
+  }
+
 }

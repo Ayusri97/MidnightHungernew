@@ -1,0 +1,35 @@
+<img src="assets/images/Canteen-Web.png" style="background-color: green; background-repeat: no-repeat;
+            background-attachment: fixed;width:110%;
+            background-position: center;" class="img-responsive; img-fluid; img-round"/>
+             
+<div class="col-md-12 contact-top-right">
+  <div class="contact">
+      <div class="container">      
+             <div class="contact-main">
+              <div class="contact-top">
+                  <h3 style="color:#2FD828" style="color:#2FD828">Place your Order</h3>
+                  <div class="contact-textarea">
+                      <form #ProdData="ngForm" (ngSubmit)="AddProduct(ProdData.value)">
+                          <select name="Category" ngModel>
+                              <option value="0" selected disabled>------Select Category------</option>
+                              <option value="1">BREAKFAST TO GO</option>
+                              <option value="2">BRUNCH</option>
+                              <option value="3">BEVERAGES</option>
+                              <option value="4">MIDNIGHT MUNCHINGS</option>
+
+                          </select>
+
+                          <input type="text" name="Item" ngModel placeholder="Item" />
+
+                          <input type="submit" value="Add" />
+                      </form>
+                  </div>
+
+
+              </div>
+
+              <div class="clearfix"></div>
+          </div>
+      </div>
+  </div>
+</div>

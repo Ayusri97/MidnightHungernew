@@ -1,25 +1,27 @@
+<AdminMenu></AdminMenu>
 <div class="container">
-    <br>
-    <div class="card-body">
-    <table class="table table-bordered table-hover table-striped">
-      <thead>
-        <tr>
-            <th>Id</th>
-          <th>Name</th>
-          <th>Address</th>
-          <th>Contact</th>
-  
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let k of objAccount">
+  <br>
+  <br>
+<h1 style="color:#2FD828">All Registered Users</h1>
+      <table class="table table-bordered table-hover table-striped">
+        <thead class="bg bg-success">
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Contact</th>
 
-          <td>{{k._id}}</td>
-          <td>{{k.Name}}</td>
-          <td>{{k.Address}}</td>
-          <td>{{k.Contact}}</td>
-  
-  </tbody>
-  </table>
-  </div>
-  </div>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let k of objAccount">
+
+            <td>{{k.Name}}</td>
+            <td>{{k.Address}}</td>
+            <td>{{k.Email}}</td>
+            <td>{{k.Contact}}</td>
+          </tr>
+        </tbody>
+      </table>
+    
+</div>
